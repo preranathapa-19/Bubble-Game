@@ -1,3 +1,11 @@
+var timer = 60;
+
+function hitNewNum() {
+  let ran= Math.floor(Math.random()*10);
+   document.querySelector("#ranhit").textContent =ran;
+}
+
+
 function makebubble(){
 let clutter = "";
 
@@ -9,7 +17,6 @@ for(var i = 0; i<=132; i++){
 document.querySelector("#pbtm").innerHTML = clutter;
 }
 
-var timer = 60;
 function setTimer(){
  let timeint= setInterval(function(){
    if(timer > 0){
@@ -20,5 +27,7 @@ function setTimer(){
    } 
    },1000);
 }
+
+hitNewNum()
 setTimer()
 makebubble()
