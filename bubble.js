@@ -1,13 +1,14 @@
 var timer = 60;
 var score = 0;
+var hitrn;
 
 function increaseScore(){
    score +=10;
    document.querySelector("#scoreval").textContent = score;
 }
 function hitNewNum() {
-  let ran= Math.floor(Math.random()*10);
-   document.querySelector("#ranhit").textContent =ran;
+  hitrn= Math.floor(Math.random()*10);
+   document.querySelector("#ranhit").textContent = hitrn;
 }
 
 
@@ -32,6 +33,15 @@ function setTimer(){
    } 
    },1000);
 }
+
+document.querySelector("#pbtm")
+.addEventListener("click",
+     function(dets){
+      var clickednum = Number(dets.target.textContent);
+      if(clickednum === hitrn){
+         increaseScore();
+      }
+});
 
 hitNewNum()
 setTimer()
