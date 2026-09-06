@@ -30,7 +30,7 @@ function setTimer(){
       document.querySelector("#timerval").textContent = timer;
    }else{
       clearInterval(timeint);
-      document.querySelector("#pbtm").innerHTML = `<h1>Game Over</h1>`;
+      document.querySelector("#pbtm").innerHTML = `<h1>Game Over 🤪🤪</h1>`;
    } 
    },1000);
 }
