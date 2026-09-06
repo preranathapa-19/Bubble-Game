@@ -1,5 +1,10 @@
 var timer = 60;
+var score = 0;
 
+function increaseScore(){
+   score +=10;
+   document.querySelector("#scoreval").textContent = score;
+}
 function hitNewNum() {
   let ran= Math.floor(Math.random()*10);
    document.querySelector("#ranhit").textContent =ran;
