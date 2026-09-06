@@ -30,6 +30,7 @@ function setTimer(){
       document.querySelector("#timerval").textContent = timer;
    }else{
       clearInterval(timeint);
+      document.querySelector("#pbtm").innerHTML = `<h1>Game Over</h1>`;
    } 
    },1000);
 }
@@ -40,6 +41,8 @@ document.querySelector("#pbtm")
       var clickednum = Number(dets.target.textContent);
       if(clickednum === hitrn){
          increaseScore();
+         makebubble();
+         hitNewNum();
       }
 });
 
